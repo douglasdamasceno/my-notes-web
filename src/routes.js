@@ -7,14 +7,16 @@ import Login from "./pages/auth/login";
 import NotesIndex from "./pages/notes/index";
 import UserEdit from "./pages/users/edit";
 
+import PrivateRouter from "../src/components/auth/private_router";
+
 const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/notes" component={NotesIndex} />
-      <Route exact path="/users/edit" component={UserEdit} />
+      <PrivateRouter exact path="/notes" component={NotesIndex} />
+      <PrivateRouter exact path="/users/edit" component={UserEdit} />
     </Switch>
   </BrowserRouter>
 );

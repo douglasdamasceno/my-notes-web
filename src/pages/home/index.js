@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Column, Section, Title, Container } from "rbx";
 
 import "../../styles/home.scss";
+
 const Home = () => (
   <Fragment>
     <Header />
