@@ -5,6 +5,7 @@ const privateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
+      //fazer ir na api e compare o token
       localStorage.getItem("user") ? (
         <Component {...props} />
       ) : (

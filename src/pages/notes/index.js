@@ -1,11 +1,16 @@
-import React, { Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import HeaderLogged from "../../../src/components/header_logged";
 
-const Notes = () => (
-  <Fragment>
-    <HeaderLogged />
-    Hello World
-  </Fragment>
-);
+import Notes from "../../../src/components/Notes";
 
-export default Notes;
+function NotesScreen() {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <Fragment>
+      <HeaderLogged setIsOpen={setIsOpen} />
+      <Notes setIsOpen={setIsOpen} isOpen={isOpen} />
+    </Fragment>
+  );
+}
+
+export default NotesScreen;
